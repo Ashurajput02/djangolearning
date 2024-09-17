@@ -1,0 +1,33 @@
+{% comment %} yeh ek common file hogi jo sab jagah use hogi {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} ashbabe {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <nav>This is our navBar</nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>
+
+{% comment %} jo bhi tum unnamed block mein dete ho that can be easily
+overwriten at any moment {% endcomment %} {% comment %} yeh ek common file hogi
+jo sab jagah use hogi {% endcomment %} {% load static tailwind_tags %} {% load
+static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} ashbabe {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% tailwind_css %}
+  </head>
+  <body>
+    <nav>This is our navBar</nav>
+    {% block content %} hello{% endblock %}
+  </body>
+</html>
